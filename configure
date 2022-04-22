@@ -2,7 +2,7 @@
 if [ ! -d "/home/coder/workspace/project" ]
 then
 ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
-git clone git://calebtonn/terraform-image.git /home/coder/workspace/project
+git clone https://github.com/calebtonn/xyz-client.git /home/coder/workspace/project
 else
 echo "Project has already been cloned."
 fi
