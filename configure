@@ -6,4 +6,5 @@ git clone https://github.com/calebtonn/xyz-client.git /home/coder/workspace/proj
 else
 echo "Project has already been cloned."
 fi
+cd $HOME/workspace/project
 pre-commit install
