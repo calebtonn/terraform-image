@@ -10,14 +10,14 @@ RUN sudo wget https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terr
 RUN pip install pre-commit
 
 # Install Go
-RUN curl -L "https://go.dev/dl/go1.18.1.src.tar.gz" | tar -C /usr/local -xzvf -
+RUN pip install go
 
 # Setup go env vars
-ENV GOROOT /usr/local/go
-ENV PATH $PATH:$GOROOT/bin
+#ENV GOROOT /usr/local/go
+#ENV PATH $PATH:$GOROOT/bin
 
-ENV GOPATH /home/coder/go
-ENV GOBIN $GOPATH/bin
-ENV PATH $PATH:$GOBIN
+#ENV GOPATH /home/coder/go
+#ENV GOBIN $GOPATH/bin
+#ENV PATH $PATH:$GOBIN
 
 COPY [ "configure", "/coder/configure" ]
